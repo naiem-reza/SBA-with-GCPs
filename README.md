@@ -1,0 +1,92 @@
+# Sparse-Bundle-Adjustments-with-GCPs
+
+
+A bundle adjusmtent problem arises in 3-D reconstruction and it can be formulated as follows (taken from https://en.wikipedia.org/wiki/Bundle_adjustment):
+
+A bundle adjustment is a process of refining 3D coordinates describing a scene geometry while simultaneously refining the parameters of relative motion, 
+and the optical characteristics of the camera(s) used to acquire the images according to an optimality criterion involving their corresponding image projections.
+
+The basic photogrammetric principal geometry consists of three geometric entities: object space points (3D points), corresponding image points (2D points), and perspective centers. Such a geometry can be formulized with collinearity equations. 
+
+ $R_{ij} (i = 1,2,3,... , j = 1,2,3,...)$ stands for the nine elements of the rotation matrix , which can be modeled by three rotation Euler angles $\omega\$,
+ $\varphi\$ and $\kappa\$. 
+ 
+$$R =\begin{bmatrix}
+    r_{11} & r_{12} & r_{13}     \\
+    r_{21} & r_{22} & r_{23}     \\
+    r_{31} & r_{32} & r_{33}
+\end{bmatrix}$$
+
+$$\begin{bmatrix}
+    P  \\
+    S  \\
+    Q
+\end{bmatrix}
+= R .\begin{pmatrix}\begin{bmatrix}
+    x   \\
+    Y   \\
+    Z
+\end{bmatrix} - \begin{bmatrix}
+    X_{0}     \\
+    Y_{0}     \\
+    Z_{0}
+\end{bmatrix}
+\end{pmatrix}$$
+ 
+$X_{0},Y_{0}$ and $Z_{0}$ are the translation parameters for the camera station. Meanwhile, $X,Y$ and $Z$ are are the object point coordinates usually given in meters in the mapping reference system (i.e., Earth-fixed coordinate system, in the case UTM)
+
+The additional parameters related to lens distortions, coordinates of the principal point (i.e., the point closest to the projection center), and sensor distortions can, in practice, be used to recover the theoretical collinearity condition between image points, camera position, and object point.
+
+To estimate the 6 EOPs, the image coordinates are first rectifed using the calculated IOPs of the digital camera, consisting of the principal point $(c_{x},c_{x})$ (in pixel), the focal length $f$ (in pixel), the coefcients of radial distortion $\(K_{1},K_{2},K_{3})\$ (in pixel) and the coefcients of decentring distortion $\(P1,P2)\$ (pixel) and affinity and non-orthogonality (skew) coefficients $(B1, B2)$ (in pixels).  According to equations, the image measurements $(u, v)$ (pixel) are rectifed to $(u', v')$ (pixel) according to
+
+ 
+$x = - \frac{P}{Q}$
+
+$y = \frac{S}{Q}$
+
+$r= \sqrt{x^2+y^2}$
+
+$x' = x(K_{1}r^2 + K_{2}r^4 + K_{3}r^6) + (P_{1}(r^2+2x^2) + 2P_{2}xy)$
+
+$y' = y(K_{1}r^2 + K_{2}r^4 + K_{3}r^6) + (P_{2}(r^2+2y^2) + 2P_{1}xy)$
+
+$u' = 0.5w + c_{x} + x'f + x'B1 + y'B2$
+
+$v' = 0.5h + c_{y} + y'f$
+
+ $f_{x} = u - u'$ 
+ 
+ $f_{y} = v - v'$
+
+
+
+Finally, the camera parameters and coordinates of Tie points and are updated. In this research, the Sparse Bundle Adjustment (SBA) method was used to solve linear condition equations. Because the number of equations of observations and the number of unknowns is high. As a result, the dimensions of matrix A are so large that they cannot be solved in the usual way.
+
+In this re
+
+## setup
+Requires Python and the installation of following packages
+
+- numpy
+- pandas
+- scipy
+- matplotlib
+- ismember
+- xmltodict
+
+## Installation using pip
+If using pip as your package manager you only need to type the following...
+
+
+``` math
+    pip install -r requirements
+```
+
+
+
+
+
+
+
+
+
