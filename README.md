@@ -88,6 +88,9 @@ If using pip as your package manager you only need to type the following...
 
 
 ## Results
+![plot](./figure/fig2.jpg)
+
+
 ![plot](./figure/fig1.jpg)
 
 
