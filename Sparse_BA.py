@@ -9,7 +9,7 @@ from scipy.sparse import lil_matrix
 from scipy.sparse.linalg import lsqr
 
 # --------------------------------------------------------------------- User inputs
-data_folder_name = 'data3'
+data_folder_name = 'data'
 lnda = 10
 convergence_criteria = 1     # pixel
 Max_iter = 1000
