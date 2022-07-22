@@ -86,7 +86,7 @@ If using pip as your package manager you only need to type the following...
 - Lib : inclode Objective function, Jacobians and functions that read initial IOPs, EOPs and etc.
 - Sparse_BA : inclode main code that implementation BA
 
-Its not package, easy to use just update data folder and run Sparse_BA.py.
+Its not package, easy to use, just update data folder and run Sparse_BA.py.
 
 
 ## Results
