@@ -90,7 +90,7 @@ Its not package, easy to use, just update data folder and run Sparse_BA.py.
 
 
 ## Results
-![plot](./figure/fig2.jpg)
+![plot](./figure/fig3.jpg)
 
 
 ![plot](./figure/fig1.jpg)
