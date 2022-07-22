@@ -59,9 +59,9 @@ $v' = 0.5h + c_{y} + y'f$
 
 
 
-Finally, the camera parameters and coordinates of Tie points and are updated. In this research, the Sparse Bundle Adjustment (SBA) method was used to solve linear condition equations. Because the number of equations of observations and the number of unknowns is high. As a result, the dimensions of matrix A are so large that they cannot be solved in the usual way.
+Finally, the camera parameters and coordinates of Tie points and are updated. In this research, the Sparse Bundle Adjustment (SBA) method was used Reduced Camera System, and Schur Complement. Because the number of equations of observations and the number of unknowns is high. As a result, the dimensions of matrix A are so large that they cannot be solved in the usual way.
+It can prove that the schur complement of a symmetric positive definite matrix is symmetric positive definite, thus can be solved by Cholesky decomposition. (taken from https://en.wikipedia.org/wiki/Schur_complement)
 
-In this re
 
 ## setup
 Requires Python and the installation of following packages
