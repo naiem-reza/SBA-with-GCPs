@@ -1,10 +1,9 @@
 # Sparse-Bundle-Adjustments-with-GCPs
 
 
-A bundle adjusmtent problem arises in 3-D reconstruction and it can be formulated as follows (taken from https://en.wikipedia.org/wiki/Bundle_adjustment):
+This python implementation of Sparse bundle adjustment based on the sparse Levenberg-Marquardt algorithm with Ground Control Points (GCPs). A bundle adjusmtent problem arises in 3-D reconstruction and it can be formulated as follows (taken from https://en.wikipedia.org/wiki/Bundle_adjustment):
 
-A bundle adjustment is a process of refining 3D coordinates describing a scene geometry while simultaneously refining the parameters of relative motion, 
-and the optical characteristics of the camera(s) used to acquire the images according to an optimality criterion involving their corresponding image projections.
+To derive accurate 3D geospatial information from imagery, it is necessary to establish the camera's interior and exterior orientation parameters. Interior orientation parameters (IOPs), which contain the internal sensor elements such as principal distance, principal point coordinates, and lens distortions, are specified through a camera calibration procedure. EOPs, which define the position and orientation of the camera at the point of exposure in a mapping frame, can be established using either Ground Control Points (GCPs) through a Aerial triangulation (AT) process. AT is one of the most critical steps in aerial photogrammetry to estimate the Tie points Object coordinates (OC), EOPs, and  IOP which is performed with the bundle Adjustment (BA).
 
 The basic photogrammetric principal geometry consists of three geometric entities: object space points (3D points), corresponding image points (2D points), and perspective centers. Such a geometry can be formulized with collinearity equations. 
 
@@ -83,8 +82,9 @@ If using pip as your package manager you only need to type the following...
 ```
 
 
-
-
+## Files
+- Lib : inclode Objective function, Jacobians and functions that read initial IOPs, EOPs and etc.
+- Sparse_BA : inclode main code that implementation BA
 
 
 
