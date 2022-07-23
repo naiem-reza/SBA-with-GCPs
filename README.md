@@ -22,7 +22,7 @@ $$\begin{bmatrix}
     Q
 \end{bmatrix}
 = R .\begin{pmatrix}\begin{bmatrix}
-    x   \\
+    X   \\
     Y   \\
     Z
 \end{bmatrix} - \begin{bmatrix}
@@ -36,7 +36,7 @@ $X_{0},Y_{0}$ and $Z_{0}$ are the translation parameters for the camera station.
 
 The additional parameters related to lens distortions, coordinates of the principal point (i.e., the point closest to the projection center), and sensor distortions can, in practice, be used to recover the theoretical collinearity condition between image points, camera position, and object point.
 
-To estimate the 6 EOPs, the image coordinates are first rectifed using the calculated IOPs of the digital camera, consisting of the principal point $(c_{x},c_{x})$ (in pixel), the focal length $f$ (in pixel), the coefcients of radial distortion $\(K_{1},K_{2},K_{3})\$ (in pixel) and the coefcients of decentring distortion $\(P1,P2)\$ (pixel) and affinity and non-orthogonality (skew) coefficients $(B1, B2)$ (in pixels).  According to equations, the image measurements $(u, v)$ (pixel) are rectifed to $(u', v')$ (pixel) according to
+To estimate the 6 EOPs, the image coordinates are first rectifed using the calculated IOPs of the digital camera, consisting of the principal point $(c_{x},c_{x})$ (in pixel), the focal length $f$ (in pixel), the coefcients of radial distortion $\(K_{1},K_{2},K_{3})\$ (in pixel), image width and height $(w , h)$ (in pixels) and the coefcients of decentring distortion $\(P_1,P_2)\$ (pixel) and affinity and non-orthogonality (skew) coefficients $(B_1, B_2)$ (in pixels).  According to equations, the image measurements $(u, v)$ (pixel) are rectifed to $(u', v')$ (pixel) according to
 
  
 $x = - \frac{P}{Q}$
@@ -49,7 +49,7 @@ $x' = x(K_{1}r^2 + K_{2}r^4 + K_{3}r^6) + (P_{1}(r^2+2x^2) + 2P_{2}xy)$
 
 $y' = y(K_{1}r^2 + K_{2}r^4 + K_{3}r^6) + (P_{2}(r^2+2y^2) + 2P_{1}xy)$
 
-$u' = 0.5w + c_{x} + x'f + x'B1 + y'B2$
+$u' = 0.5w + c_{x} + x'f + x'B_1 + y'B_2$
 
 $v' = 0.5h + c_{y} + y'f$
 
