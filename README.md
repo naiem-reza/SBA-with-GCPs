@@ -90,9 +90,17 @@ Its not package, easy to use, just update data folder and run Sparse_BA.py.
 
 
 ## Results
-![plot](./figure/fig3.jpg)
+- Iteration of Algorithm (Up), Iteration of image and object coordinate residuals and the posteriori sigma zero (Phi) (down)  
+![plot](./figure/iter.jpg)
+![plot](./figure/Figure_1.png)
 
+- Show Rsiduals of first iteration (Up), Normal and t-student distribution on histogram of all residuals (down)
+![plot](./figure/Figure_4.png)
+![plot](./figure/Figure_2.png)
 
-![plot](./figure/fig1.jpg)
+- Show Rsiduals of Last iteration (Up), Normal and t-student distribution on histogram of all residuals (down)
+![plot](./figure/Figure_5.png)
+![plot](./figure/Figure_3.png)
+
 
 
