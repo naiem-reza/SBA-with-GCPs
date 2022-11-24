@@ -83,10 +83,10 @@ pip install -r requirements
 
 
 ## Files
-- Lib : inclode Objective function, Jacobians and functions that read initial IOPs, EOPs and etc.
-- Sparse_BA : inclode main code that implementation BA
+- Func : inclode Objective function, Jacobians and functions that read initial IOPs, EOPs and etc.
+- SBA : inclode main code that implementation BA
 
-Its not package, easy to use, just update data folder and run Sparse_BA.py.
+Its not package, easy to use, just update data folder and run SBA.py.
 
 
 ## Results
