@@ -77,8 +77,8 @@ Requires Python and the installation of following packages
 If using pip as your package manager you only need to type the following...
 
 
-``` math
-    pip install -r requirements
+```
+pip install -r requirements
 ```
 
 
