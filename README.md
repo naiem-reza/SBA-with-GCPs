@@ -6,6 +6,8 @@ This python implementation of Sparse bundle adjustment is based on the sparse Le
 To derive accurate 3D geospatial information from imagery, it is necessary to establish the camera's interior and exterior orientation parameters. , which contain internal sensor elements such as principal distance, principal point coordinates, and lens distortions, are specified through a camera calibration procedure. EOPs, which define the position and orientation of the camera at the point of exposure in a mapping frame, can be established using either Ground Control Points (GCPs) or through an Aerial triangulation (AT) process. AT is one of the most critical steps in aerial photogrammetry to estimate the Tie points Object coordinates (OC) and EO
 
 
+if you want compute Interior orientation parameters (IOP) of Cameras, should use (SBA-with-CameraCalibration) repository as follows (https://github.com/naiem-reza/SBA-with-CameraCalibration)
+
 ## setup
 Requires Python and the installation of following packages
 
